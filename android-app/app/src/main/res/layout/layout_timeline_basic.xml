@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/timelineWrapper"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/iniciadoraIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dot_sem_acao" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/iniciadoraWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iniciadoraIndicator"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@id/iniciadoraIndicator"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="6dp"
+        app:contentPadding="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/iniciadoraNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="12sp"
+                tools:text="Câmara dos Deputados" />
+
+            <TextView
+                android:id="@+id/iniciadoraDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="11sp"
+                tools:ignore="SmallSp"
+                tools:text="27/03/2018" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/colorBlueDark"
+                android:textSize="13sp"
+                android:text="Casa Iniciadora" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/iniciadoraLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/iniciadoraWrapper"
+        android:layout_below="@id/iniciadoraIndicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:background="@color/colorGrayLighter" />
+
+    <View
+        android:id="@+id/revisoraIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/iniciadoraLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dot_sem_acao" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/revisoraWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/revisoraIndicator"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/revisoraIndicator"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="6dp"
+        app:contentPadding="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/revisoraNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="12sp"
+                tools:text="Câmara dos Deputados" />
+
+            <TextView
+                android:id="@+id/revisoraDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="11sp"
+                tools:ignore="SmallSp"
+                tools:text="24/02/2016" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Casa Revisora"
+                android:textColor="@color/colorBlueDark"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/revisoraLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/revisoraWrapper"
+        android:layout_below="@id/revisoraIndicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:background="@color/colorGrayLighter" />
+
+    <View
+        android:id="@+id/sancaoIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/revisoraLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dot_sem_acao" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sancaoWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/sancaoIndicator"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@id/sancaoIndicator"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="6dp"
+        app:contentPadding="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sancaoNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presidência da República"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/sancaoDateText"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="11sp"
+                tools:ignore="SmallSp"
+                tools:text="24/02/2016" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Sanção Presidencial"
+                android:textColor="@color/colorBlueDark"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/sancaoLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/sancaoWrapper"
+        android:layout_below="@id/sancaoIndicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:background="@color/colorGrayLighter" />
+
+    <View
+        android:id="@+id/promulgacaoIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/sancaoLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dot_sem_acao" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/promulgacaoWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/promulgacaoIndicator"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/promulgacaoIndicator"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="6dp"
+        app:contentPadding="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/promulgacaoNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presidência da República"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/promulgacaoDateText"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="11sp"
+                tools:ignore="SmallSp"
+                tools:text="24/02/2016" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Promulgação e Publicação"
+                android:textColor="@color/colorBlueDark"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

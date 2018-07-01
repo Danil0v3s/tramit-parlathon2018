@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/tipoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/tipo_label"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tipoText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tipoLabel"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@id/dataText"
+        android:fontFamily="@font/circular_std_bold"
+        android:maxLines="2"
+        android:textColor="@color/colorBlueDark"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Projeto de Lei" />
+
+    <TextView
+        android:id="@+id/origemLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipoText"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/origem_label"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/origemText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/origemLabel"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@id/assuntoText"
+        android:fontFamily="@font/circular_std_bold"
+        android:maxLines="2"
+        android:textColor="@color/colorBlueDark"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Câmara dos Deputados" />
+
+    <TextView
+        android:id="@+id/tramitacaoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/origemText"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/tramit_label"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tramitacaoText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tramitacaoLabel"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@id/assuntoText"
+        android:fontFamily="@font/circular_std_bold"
+        android:textColor="@color/colorBlueDark"
+        android:maxLines="2"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Notificação de Apensafdspofakpdsofkapsdokfpsaokfpção" />
+
+    <TextView
+        android:id="@+id/dataLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/tipoLabel"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/data_label"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/dataText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginEnd="22dp"
+        android:layout_alignStart="@id/dataLabel"
+        android:layout_below="@id/tipoLabel"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_bold"
+        android:textColor="@color/colorBlueDark"
+        android:maxLines="1"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="10/02/2018" />
+
+    <TextView
+        android:id="@+id/assuntoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/dataLabel"
+        android:layout_below="@id/tipoText"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/label_assunto"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/assuntoText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignStart="@id/assuntoLabel"
+        android:layout_below="@id/assuntoLabel"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_bold"
+        android:textColor="@color/colorBlueDark"
+        android:maxLines="1"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Energia" />
+
+    <TextView
+        android:id="@+id/regimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/dataLabel"
+        android:layout_below="@id/assuntoText"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="@string/regime_label"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/regimeText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignStart="@id/assuntoLabel"
+        android:layout_below="@id/regimeLabel"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_bold"
+        android:maxLines="2"
+        android:textColor="@color/colorBlueDark"
+        app:autoSizeMaxTextSize="13.5sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Urgente" />
+
+
+</RelativeLayout>

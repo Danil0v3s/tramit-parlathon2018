@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:id="@+id/spacerTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/frame"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<Space-->
+        <!--android:id="@+id/space"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/textWrapper" />-->
+
+    <View
+        android:id="@+id/timelineIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/dot_sem_acao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frame" />
+
+    <View
+        android:id="@+id/centerBottomLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGrayDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/timelineIndicator"
+        app:layout_constraintStart_toStartOf="@+id/timelineIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/timelineIndicator"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timelineIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/spacerTop"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/textWrapper"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp"
+            app:contentPadding="6dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/despachoTramitacaoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="12sp"
+                    tools:text="dfapsdofkaspdfkpsadokfpsodkfpasdokfpsakfpasodkfpsdokf" />
+
+                <TextView
+                    android:id="@+id/orgaoTramitacaoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="11sp"
+                    tools:text="dfapsdofkaspdfkpsadokfpsodkfpasdokfpsakfpasodkfpsdokf" />
+
+                <TextView
+                    android:id="@+id/horaTramitacaoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="11sp"
+                    tools:text="dfapsdofkaspdfkpsadokfpsodkfpasdokfpsakfpasodkfpsdokf" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

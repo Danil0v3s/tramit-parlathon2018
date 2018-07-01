@@ -1,0 +1,22 @@
+{
+  "name": "parlathon",
+  "version": "0.5.3",
+  "description": "",
+  "author": "danielfsousa <sousa.dfs@gmail.com>",
+  "main": "functions/__main__.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "danielfsousa/parlathon",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/parlamentarPicture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        tools:src="@drawable/lulinha" />
+
+    <TextView
+        android:id="@+id/parlamentarName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:maxLength="18"
+        android:maxLines="1"
+        android:fontFamily="@font/circular_std_medium"
+        android:textColor="@color/colorFontBody"
+        android:textSize="13sp"
+        tools:text="Cláudio I." />
+
+    <TextView
+        android:id="@+id/parlamentarPartido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:maxLength="18"
+        android:maxLines="1"
+        android:fontFamily="@font/cc_circular_std_medium"
+        android:textColor="@color/colorFontBody"
+        android:textSize="12sp"
+        tools:text="PT - RR" />
+
+</LinearLayout>

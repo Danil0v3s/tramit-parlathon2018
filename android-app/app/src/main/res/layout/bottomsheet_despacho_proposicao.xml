@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <TextView
+        android:id="@+id/despachoHeading"
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_despacho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/default_content_description"
+        android:rotation="90"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/colorBlueDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="344dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/despachoOrgaoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despachoHeading"
+        tools:text="CCNJ" />
+
+    <TextView
+        android:id="@+id/bulletLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/despachoOrgaoText"
+        app:layout_constraintTop_toBottomOf="@id/despachoHeading"
+        tools:text="•" />
+
+    <TextView
+        android:id="@+id/despachoDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/bulletLabel"
+        app:layout_constraintTop_toBottomOf="@id/despachoHeading"
+        tools:text="12/12/2029" />
+
+    <TextView
+        android:id="@+id/despachoDescricaoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despachoOrgaoText"
+        tools:text="dasdasda" />
+
+    <TextView
+        android:id="@+id/despachoText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="#595B60"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/maisInfoBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despachoDescricaoText"
+        tools:text="Devido a desarquivamento desta proposição em requerimento anterior, foi declarada prejudicada a solicitação de desarquivamento constante do REQ-384/2015." />
+
+
+    <RelativeLayout
+        android:id="@+id/maisInfoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="27.5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_button_info_tramitacoes_main_activity"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/infoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/circular_std_medium"
+            android:text="@string/label_mais_info"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/procurarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:fontFamily="@font/cc_circular_std_medium"
+            android:letterSpacing="0.02"
+            android:text="@string/label_procurar"
+            android:textColor="@color/colorFontHeading"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/HeadingText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toStartOf="@id/proposicoesCamaraVerMaisBtn"
+                android:maxLines="2"
+                android:text="@string/label_proposicoes"
+                app:autoSizeMaxTextSize="@dimen/title_size"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/proposicoesCamaraVerMaisBtn"
+                style="@style/VerMaisText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/camaraProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorBlueDark"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/proposicoesRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation_from_right"
+            android:minHeight="185dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/HeadingText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toStartOf="@id/proposicoesSenadoVerMaisBtn"
+                android:maxLines="2"
+                android:text="@string/label_pl_senado"
+                app:autoSizeMaxTextSize="@dimen/title_size"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/proposicoesSenadoVerMaisBtn"
+                style="@style/VerMaisText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/senadoProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:layout_marginBottom="26dp"
+            android:indeterminateTint="@color/colorBlueDark"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/proposicoesSenadoRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            android:layoutAnimation="@anim/layout_animation_from_right"
+            android:minHeight="185dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/informacoesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_button_info_tramitacoes_main_activity"
+            android:gravity="center"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/infoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10.5dp"
+                android:layout_marginStart="10.5dp"
+                android:text="@string/info_tramitacoes_label"
+                android:textColor="@color/colorPureWhite"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/HeadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_parlamentares" />
+
+            <TextView
+                android:id="@+id/parlamentaresVerMaisBtn"
+                style="@style/VerMaisText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/parlamentaresRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation_from_right" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/HeadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_partidos" />
+
+            <TextView
+                android:id="@+id/partidosVerMaisBtn"
+                style="@style/VerMaisText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/partidosRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation_from_right"
+            android:minHeight="185dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp" />
+
+    </LinearLayout>
+</ScrollView>

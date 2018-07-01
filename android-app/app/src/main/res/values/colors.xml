@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== cores ===== -->
+    <color name="colorWhite">#F4F5FA</color>
+    <color name="colorPureWhite">#FFFFFF</color>
+
+    <color name="colorGrayDark">#6A7A8A</color>
+    <color name="colorGray">#86898B</color>
+    <color name="colorGrayLight">#9FA5B5</color>
+    <color name="colorGrayLighter">#D4DEE6</color>
+
+    <color name="colorBlueDark">#324B64</color>
+    <color name="colorBrightBlue">#002080</color>
+    <color name="colorBlue">#557AC7</color>
+    <color name="colorBlueLight">#8EA2FF</color>
+    <color name="colorBlueLighter">#BAC6FC</color>
+
+    <color name="colorDeepBlue">#2575FC</color>
+    <color name="colorDeepPurple">#6A11CB</color>
+
+    <color name="colorYellowDark">#E2B689</color>
+    <color name="colorYellow">#FDC830</color>
+    <color name="colorYellowLight">#FFF01E</color>
+
+    <color name="colorOrange">#F37335</color>
+    <color name="colorOrangeLight">#FFB397</color>
+
+    <color name="colorRedDark">#FE3B3B</color>
+    <color name="colorRedLight">#EC7D7D</color>
+
+    <color name="colorGreen">#3CBA92</color>
+    <color name="colorGreenDark">#0BA360</color>
+
+    <color name="colorGreenLight">#50F9B4</color>
+    <color name="colorOceanBlue">#38CAE9</color>
+
+    <color name="colorLime">#D4FC79</color>
+    <color name="colorLimeDark">#1CB94F</color>
+
+    <color name="colorPurple">#3B5CFE</color>
+    <color name="colorPurpleLight">#CF95FF</color>
+
+    <color name="colorPink">#F46AA0</color>
+
+    <!-- ===== componentes ===== -->
+    <color name="colorPrimary">@color/colorBlueLight</color>
+    <color name="colorPrimaryDark">@color/colorBlue</color>
+    <color name="colorAccent">@color/colorOrange</color>
+    <color name="colorBackground">@color/colorWhite</color>
+    <color name="colorCardBackground">@color/colorPureWhite</color>
+    <color name="colorFontHeading">@color/colorBlueDark</color>
+    <color name="colorFontBody">@color/colorGray</color>
+    <color name="colorFontLink">@color/colorBlue</color>
+    <color name="colorFontLabel">@color/colorGrayLight</color>
+    <color name="colorIcon">@color/colorGrayLighter</color>
+    <color name="colorShadow">@color/colorBrightBlue</color>
+
+    <!-- ===== degrades ===== -->
+    <color name="gradientBlueStart">@color/colorBlueLight</color>
+    <color name="gradientBlueEnd">@color/colorBlue</color>
+
+    <color name="gradientDeepBlueStart">@color/colorDeepBlue</color>
+    <color name="gradientDeepBlueEnd">@color/colorDeepPurple</color>
+
+    <color name="gradientCyanStart">@color/colorGreenLight</color>
+    <color name="gradientCyanEnd">@color/colorOceanBlue</color>
+
+    <color name="gradientYellowStart">@color/colorYellowLight</color>
+    <color name="gradientYellowEnd">@color/colorYellowDark</color>
+
+    <color name="gradientOrangeStart">@color/colorYellow</color>
+    <color name="gradientOrangeEnd">@color/colorOrange</color>
+
+    <color name="gradientRedStart">@color/colorRedLight</color>
+    <color name="gradientRedEnd">@color/colorRedDark</color>
+
+    <color name="gradientGreenStart">@color/colorGreen</color>
+    <color name="gradientGreenEnd">@color/colorGreenDark</color>
+
+    <color name="gradientLimeStart">@color/colorLime</color>
+    <color name="gradientLimeEnd">@color/colorLimeDark</color>
+
+    <color name="gradientPurpleStart">@color/colorPurpleLight</color>
+    <color name="gradientPurpleEnd">@color/colorPurple</color>
+
+    <color name="gradientPinkStart">@color/colorOrangeLight</color>
+    <color name="gradientPinkEnd">@color/colorPink</color>
+</resources>

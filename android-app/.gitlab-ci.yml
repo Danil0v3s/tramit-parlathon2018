@@ -1,0 +1,55 @@
+image: jangrewe/gitlab-ci-android
+
+stages:
+  - build
+  
+.build_template: &build_template_def
+  before_script:
+    - export GRADLE_USER_HOME=$(pwd)/.gradle
+    - chmod +x ./gradlew
+    - export VERSION_NAME=`egrep '^[[:blank:]]+versionName[[:blank:]]'  app/build.gradle | awk '{print $2}' | sed s/\"//g`
+    - export VERSION_CODE=`egrep '^[[:blank:]]+versionCode[[:blank:]]'  app/build.gradle | awk '{print $2}'`
+    - mkdir -p deliverables
+
+    # Store some information about the build
+    - touch ./deliverables/info.txt
+    - echo "Build date          $(date)"                >> ./deliverables/info.txt
+    - echo "App version name    ${VERSION_NAME}"        >> ./deliverables/info.txt
+    - echo "App version code    ${VERSION_CODE}"        >> ./deliverables/info.txt
+    - echo "Git branch          ${CI_COMMIT_REF_NAME}"  >> ./deliverables/info.txt
+    - echo "Git commit          ${CI_COMMIT_SHA}"       >> ./deliverables/info.txt
+    - echo "Gitlab pipeline     ${CI_PIPELINE_ID}"      >> ./deliverables/info.txt
+  artifacts:
+    paths:
+        - deliverables
+        
+        
+build_merge_request:
+  stage: build
+  before_script:
+    - export GRADLE_USER_HOME=$(pwd)/.gradle
+    - chmod +x ./gradlew
+  only:
+    - /^feature-.*$/
+    - /^fix-.*$/
+  script:
+    - ./gradlew assembleDebug -q
+
+build_debug:
+  <<: *build_template_def
+  stage: build
+  only: 
+    - develop
+  script:
+    - ./gradlew assembleDebug -q
+    - mv app/build/outputs/apk/debug/app-debug.apk ./deliverables/$CI_PROJECT_NAME.${CI_COMMIT_SHA:0:8}.debug.apk
+
+
+build_release:
+  <<: *build_template_def
+  stage: build
+  only:
+    - master
+  script:
+    - ./gradlew assembleRelease -q
+    - mv app/build/outputs/apk/release/app-release.apk ./deliverables/$CI_PROJECT_NAME.${CI_COMMIT_SHA:0:8}.release.apk

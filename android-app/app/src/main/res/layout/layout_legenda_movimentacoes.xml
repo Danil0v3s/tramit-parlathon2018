@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/legendaHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/circular_std_book"
+        android:text="Legenda"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/legendaHeading"
+        app:layout_constraintTop_toBottomOf="@+id/legendaHeading">
+
+        <ImageView
+            android:scaleType="center"
+            android:id="@+id/camaraIcon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:contentDescription="@string/default_content_description"
+            android:src="@drawable/dot_camara_deputados" />
+
+        <TextView
+            android:id="@+id/camaraLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/circular_std_medium"
+            android:text="Câmara dos Deputados"
+            android:textColor="@color/colorBlueDark"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <ImageView
+            android:scaleType="center"
+            android:id="@+id/senadoIcon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/dot_senado"
+            android:contentDescription="@string/default_content_description"
+            />
+
+        <TextView
+            android:id="@+id/senadoLabel"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circular_std_medium"
+            android:text="Senado Federal"
+            android:textColor="@color/colorBlueDark"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:scaleType="center"
+            android:id="@+id/congressoIcon"
+            android:layout_width="10dp"
+            android:src="@drawable/dot_congresso"
+            android:layout_height="10dp"
+            android:contentDescription="@string/default_content_description" />
+
+        <TextView
+            android:id="@+id/congressoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/circular_std_medium"
+            android:text="Congresso Nacional"
+            android:textColor="@color/colorBlueDark"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

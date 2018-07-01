@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- regular -->
+    <font
+        android:font="@font/circular_std_black"
+        android:fontStyle="normal"
+        android:fontWeight="800"
+
+        app:font="@font/circular_std_black"
+        app:fontStyle="normal"
+        app:fontWeight="800" />
+
+    <!-- italic -->
+    <font
+        android:font="@font/circular_std_black_italic"
+        android:fontStyle="italic"
+        android:fontWeight="800"
+
+        app:font="@font/circular_std_black_italic"
+        app:fontStyle="italic"
+        app:fontWeight="800" />
+
+</font-family>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="313dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        android:clipChildren="true"
+        app:cardBackgroundColor="@color/colorPureWhite"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/deputadoPicture"
+                android:layout_width="121dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_content_description"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/lulinha" />
+
+            <TextView
+                android:id="@+id/proposicaoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@id/deputadoPicture"
+                android:layout_toStartOf="@id/proposicaoTipo"
+                android:maxLines="1"
+                android:textColor="@color/colorFontHeading"
+                android:textSize="18sp"
+                android:fontFamily="@font/circular_std_medium"
+                android:textStyle="bold"
+                android:letterSpacing="0.03"
+                tools:text="214/2018" />
+
+            <TextView
+                android:id="@+id/proposicaoTipo"
+                android:layout_width="38dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_preposicao_tipo"
+                android:gravity="center"
+                android:textColor="@color/colorPureWhite"
+                android:fontFamily="@font/circular_std_medium"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                tools:ignore="SmallSp"
+                tools:text="PL" />
+
+            <ImageView
+                android:id="@+id/nomeDeputadoIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignStart="@id/proposicaoName"
+                android:layout_below="@id/proposicaoName"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/default_content_description"
+                android:src="@drawable/ic_account_circle" />
+
+            <TextView
+                android:id="@+id/nomeDeputadoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/nomeDeputadoIcon"
+                android:layout_alignTop="@id/nomeDeputadoIcon"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:singleLine="true"
+                android:layout_toEndOf="@id/nomeDeputadoIcon"
+                android:gravity="center_vertical"
+                android:textSize="11sp"
+                android:textColor="@color/colorFontLabel"
+                tools:ignore="SmallSp"
+                tools:text="Luiz Inacio Lula da Silva" />
+
+            <ImageView
+                android:id="@+id/statusProposicaoIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignStart="@id/proposicaoName"
+                android:layout_below="@id/nomeDeputadoIcon"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/default_content_description"
+                android:src="@drawable/ic_timelapse" />
+
+            <TextView
+                android:id="@+id/statusProposicaoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/statusProposicaoIcon"
+                android:layout_alignTop="@id/statusProposicaoIcon"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@id/statusProposicaoIcon"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:layout_marginEnd="10dp"
+                android:textSize="11sp"
+                android:textColor="@color/colorFontLabel"
+                tools:ignore="SmallSp"
+                tools:text="Aguardando Constituição de Comissão Temporária" />
+
+            <TextView
+                android:id="@+id/ementaProposicaoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/deputadoPicture"
+                android:layout_below="@id/statusProposicaoText"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.4"
+                tools:ignore="SmallSp"
+                tools:text="PARECER nº 1, de 2018-CN, da Comissão Mista da MPV 822/2018, sobre a Medida Provisória nº 822, de 2018, que Altera a Lei nº 9.430, de 27 de dezembro de 1996, para dispor sobre a dispensa de retenção de tributos federais na aquisição de passagens aéreas pelos órgãos ou entidades da administração pública federal." />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

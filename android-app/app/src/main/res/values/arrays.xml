@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipo_array">
+        <item>Tipo de Proposição</item>
+        <item>PL</item>
+        <item>PLS</item>
+        <item>PLC</item>
+    </string-array>
+</resources>
